@@ -25,7 +25,7 @@ def test_2():
     assert list(flat_generator(list_of_lists_1)) == ['a', 'b', 'c', 'd', 'e', 'f', 'h', False, 1, 2, None]
 
     assert isinstance(flat_generator(list_of_lists_1), types.GeneratorType)
-
+    print(list(flat_generator(list_of_lists_1)))
 
 if __name__ == '__main__':
     test_2()
