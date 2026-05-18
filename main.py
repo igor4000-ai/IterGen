@@ -5,24 +5,42 @@ class FlatIterator:
         self.outer_index = 0
         self.inner_index = 0
 
-
     def __iter__(self):
-        self.outer_index = 0
-        self.inner_index = 0
         return self
 
     def __next__(self):
         while self.outer_index < len(self.list_of_list):
-            inner_list = self.list_of_list[self.outer_index]
-            if self.inner_index < len(inner_list):
-                item = inner_list[self.inner_index]
+            current_list = self.list_of_list[self.outer_index]
+            if self.inner_index < len(current_list):
+                item = current_list[self.inner_index]
                 self.inner_index += 1
                 return item
-            self.outer_index += 1
-            self.inner_index = 0
-        
+            else:
+                self.outer_index += 1
+                self.inner_index = 0
         raise StopIteration
 
+
+def test_1():
+
+    list_of_lists_1 = [
+        ['a', 'b', 'c'],
+        ['d', 'e', 'f', 'h', False],
+        [1, 2, None]
+    ]
+
+    for flat_iterator_item, check_item in zip(
+            FlatIterator(list_of_lists_1),
+            ['a', 'b', 'c', 'd', 'e', 'f', 'h', False, 1, 2, None]
+    ):
+
+        assert flat_iterator_item == check_item
+
+    assert list(FlatIterator(list_of_lists_1)) == ['a', 'b', 'c', 'd', 'e', 'f', 'h', False, 1, 2, None]
+
+
+if __name__ == '__main__':
+    test_1()
 
 def test_1():
 
