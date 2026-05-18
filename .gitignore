@@ -1,0 +1,78 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Distribution / packaging
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# IDE specific
+.idea/
+.vscode/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Coverage.py files
+htmlcov/
+.coverage
+.coverage.*
+.pytest_coverage
+
+# MyPy files
+.mypy_cache/
+
+# Pyre files
+.pyre/
+
+# PyCharm files
+*.iml
+
+# Node.js files (if applicable)
+node_modules/
+package-lock.json
+
+# Documentation files (if applicable)
+docs/
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# Poetry files (if applicable)
+poetry.lock
+
+# Pipfile (if applicable)
+Pipfile
+Pipfile.lock
+
+# uv files (if applicable)
+uv.lock
